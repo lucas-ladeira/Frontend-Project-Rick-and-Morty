@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.searchButton {
+    width: 84px;
+    height: 42px;
+    font-size: 16px;
+    font-family: Nunito, sans-serif;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: unset;
+}
+
+.searchButton:hover {
+    background-color: #ffffff;
+    color: #1e1e1e;
+    font-weight: bold;
+}
+
+::placeholder {
+    color: #9F9F9F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: Nunito, sans-serif;
+}

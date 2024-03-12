@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.app {
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1e1e1e;
+    background-image: url("../../assets/background.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: top;
+    position: relative;
+    padding-bottom: 100px;
+}

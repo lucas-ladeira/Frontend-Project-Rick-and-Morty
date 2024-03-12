@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.HomeState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    z-index: 999;
+}
+
+.searchElements {
+    display: inline-flex;
+    margin-top: 74px;
+    gap: 16px;
+}
+
+::placeholder {
+    color: #9F9F9F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: Nunito, sans-serif;
+}
