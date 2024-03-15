@@ -3,7 +3,7 @@ import "./styles.css";
 
 export const Pagination = ({ page, totalPages, handlePageChange }) => {
     const getPageNumbers = () => {
-        const max_pages = 6;
+        const max_pages = 4;
         const page_numbers = [];
         let start_page = Math.max(1, page - Math.floor(max_pages / 2));
         let end_page = Math.min(totalPages, start_page + max_pages - 1);
@@ -33,7 +33,7 @@ export const Pagination = ({ page, totalPages, handlePageChange }) => {
     };
 
     return (
-        <div className="pagination-container">
+        <div className="pagination-elements">
             <button 
                 className="page-limit" 
                 disabled={page === 1}
@@ -42,7 +42,7 @@ export const Pagination = ({ page, totalPages, handlePageChange }) => {
                 {"<"}
             </button>
             {getPageNumbers().map((number, index) => {
-                const numberClass = number === page ? "pagBtn selected" : "pagBtn";
+                const numberClass = number === page ? "pagBtn selected" : "";
                 return (
                     <button 
                         className={numberClass}

@@ -16,6 +16,7 @@
     /* filter: drop-shadow(0 0 0.5rem #CBD736); */
     color: #1e1e1e;
     font-weight: bold;
+    cursor: pointer;
 }
 
 ::placeholder {

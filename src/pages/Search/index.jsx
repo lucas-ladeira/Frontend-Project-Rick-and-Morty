@@ -7,6 +7,7 @@ import { SearchBar } from "../../components/SearchBar";
 import { SearchButton } from "../../components/Button";
 import { CharacterCard } from "../../components/Card";
 import { Loading } from "../../components/Loading";
+import { Pagination } from "../../components/Pagination";
 
 export const Search = () => {
     const { name, page } = useParams();
@@ -20,9 +21,7 @@ export const Search = () => {
 
     const handlePageChange = (newPage) => {
         if (newPage >= 1 && newPage <= totalPages) {
-            window.location.href = `/search/${encodeURIComponent(
-                searchInfo
-            )}/${newPage}`;
+            window.location.href = `/search/${encodeURIComponent(searchInfo)}/${newPage}`;
         }
     };
 
@@ -34,6 +33,7 @@ export const Search = () => {
                 );
                 setData(response.data.items);
                 setLoading(false);
+                setTotalPages(response.data.total_page);
             } catch (error) {
                 console.log("Error fetch data");
             }
@@ -85,6 +85,13 @@ export const Search = () => {
                         // }}
                     ></CharacterCard>
                 ))}
+            </div>
+            <div className="pagination-container">
+                <Pagination 
+                    page={Number(page)}
+                    totalPages={totalPages}
+                    handlePageChange={handlePageChange}
+                />
             </div>
         </>
     );

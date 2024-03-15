@@ -17,6 +17,7 @@
 .character-card:hover {
     border: 2px solid #cbd736;
     filter: drop-shadow(0 0 0.5rem #cbd736);
+    cursor: pointer;
 }
 
 .character-img {
