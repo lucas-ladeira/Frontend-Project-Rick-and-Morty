@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 38px;
+    max-height: 214px;
     z-index: 999;
 }
 

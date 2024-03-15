@@ -7,7 +7,7 @@ export const SearchBar = ({ onSearch }) => {
     };
     
     return (
-        <div>
+        <div className="text-box-container">
             <input
                 name="character"
                 className={"textBox"}
