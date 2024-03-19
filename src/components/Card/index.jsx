@@ -5,7 +5,7 @@ export const CharacterCard = ({ character, onClick }) => {
     const isDead = character.status === "Dead";
 
     return (
-        <div className="character-card">
+        <div className="character-card" onClick={onClick}>
             <img
                 src={character.image}
                 alt={character.name}

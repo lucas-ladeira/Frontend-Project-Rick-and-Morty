@@ -57,6 +57,9 @@
 .character-info span {
     margin: 0;
     max-height: 15px;
-    max-width: 100px;
+    max-width: 200px;
     font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

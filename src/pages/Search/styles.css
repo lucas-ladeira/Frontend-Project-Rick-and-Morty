@@ -23,6 +23,7 @@
     justify-content: center;
     margin-top: 38px;
     max-height: 214px;
+    overflow: hidden;
 }
 
 .searchElements {

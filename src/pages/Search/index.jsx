@@ -8,6 +8,7 @@ import { SearchButton } from "../../components/Button";
 import { CharacterCard } from "../../components/Card";
 import { Loading } from "../../components/Loading";
 import { Pagination } from "../../components/Pagination";
+import { CharacterModal } from "../../components/Modal";
 
 export const Search = () => {
     const { name, page } = useParams();
@@ -18,10 +19,14 @@ export const Search = () => {
     const [searchInfo, setSearchInfo] = useState(name);
     const [totalPages, setTotalPages] = useState(1);
     const navigate = useNavigate();
+    const [selectedCharacter, setSelectedCharacter] = useState(null);
+    const [modalOpen, setModalOpen] = useState(false);
 
     const handlePageChange = (newPage) => {
         if (newPage >= 1 && newPage <= totalPages) {
-            window.location.href = `/search/${encodeURIComponent(searchInfo)}/${newPage}`;
+            window.location.href = `/search/${encodeURIComponent(
+                searchInfo
+            )}/${newPage}`;
         }
     };
 
@@ -68,10 +73,10 @@ export const Search = () => {
                 >
                     {" "}
                     <div>
-                        <SearchBar />
+                        <SearchBar onSearch={setSearchInfo} />
                     </div>
                     <div>
-                        <SearchButton type="submit" />
+                        <SearchButton onClick={handleBtnClick} />
                     </div>
                 </form>
             </div>
@@ -80,19 +85,27 @@ export const Search = () => {
                     <CharacterCard
                         key={character.id}
                         character={character}
-                        // onClick={() => {
-                        //     setSelectCharacter(character);
-                        // }}
+                        onClick={() => {
+                            setSelectedCharacter(character);
+                            setModalOpen(true);
+                        }}
                     ></CharacterCard>
                 ))}
             </div>
+
             <div className="pagination-container">
-                <Pagination 
+                <Pagination
                     page={Number(page)}
                     totalPages={totalPages}
                     handlePageChange={handlePageChange}
                 />
             </div>
+
+            <CharacterModal
+                setModalOpen={setModalOpen}
+                modalOpen={modalOpen}
+                character={selectedCharacter}
+            />
         </>
     );
 };

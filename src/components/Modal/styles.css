@@ -1,0 +1,250 @@
+.CloseButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 84px;
+    height: 42px;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+    filter: none;
+    z-index: 1;
+}
+
+.CloseButton:hover {
+    background-color: #ffffff;
+    color: #1b1b1b;
+    cursor: pointer;
+}
+
+.ImageBackground {
+    filter: blur(60px) brightness(0.6);
+    overflow: hidden;
+    width: 401px;
+    height: 729px;
+}
+
+.ImageBackgroundContainer {
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.ImageContainer {
+    position: relative;
+    flex: 1;
+    margin-right: 150px;
+    margin-left: -450px;
+    margin-top: 70px;
+    border: 2px solid #606060;
+    border-radius: 8px;
+}
+
+.ImageContainer img {
+    width: 401px;
+    height: 598px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalCard {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    text-align: left;
+    color: white;
+    background-color: black;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.959);
+    padding-right: 50px;
+}
+
+.TextOnImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1b1b1b;
+    padding: 8px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.TextOnImage p {
+    margin: 0;
+}
+
+.title {
+    color: #cbd736;
+    font-family: Nunito;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 8.45px;
+    margin-bottom: 5px;
+    margin-top: 60px;
+    margin-left: -55px;
+}
+
+.ModalNameText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ModalSpeciesText {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.OriginSubtitle {
+    color: #8c8c8c;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2px;
+    margin-left: -55px;
+}
+
+.Sub {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    margin-left: -55px;
+}
+
+.TextModal {
+    background-color: black;
+    padding: 20px;
+}
+
+.title_text {
+    color: #d3d3d3;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -55px;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+.modal-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1034px;
+    height: 799px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Nunito", sans-serif;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.modal-character {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.character-img-front {
+    position: relative;
+    flex: 1; 
+    margin-right: 150px;
+    margin-top: 70px; 
+    border: 2px solid #606060;
+    border-radius: 8px;
+}
+
+.character-img-front img {
+    width: 401px;
+    height: 598px;
+    object-fit: cover;
+}
+
+.character-img-info {
+    padding-left: 13px;
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.character-img-info h2 {
+    margin-top: 7px;
+    max-height: 25px;
+    max-width: 378px;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.character-img-info span {
+    margin: 0;
+    max-height: 15px;
+    max-width: 276px;
+    font-size: 12px;
+}
+
+.character-info h3 {
+    font-size: 13px;
+    color: #cbd736;
+}
+
+.character-img-bg {
+    filter: blur(20px) brightness(0.5);
+    overflow: hidden;
+    width: 401px;
+    height: 729px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 84px;
+    height: 42px;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: transparent;
+} */

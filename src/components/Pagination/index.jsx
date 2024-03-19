@@ -1,5 +1,9 @@
 import React from "react";
 import "./styles.css";
+import { ChevronFirst } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { ChevronLast } from 'lucide-react';
 
 export const Pagination = ({ page, totalPages, handlePageChange }) => {
     const getPageNumbers = () => {
@@ -35,14 +39,21 @@ export const Pagination = ({ page, totalPages, handlePageChange }) => {
     return (
         <div className="pagination-elements">
             <button 
-                className="page-limit" 
+                className={page === 1 ? "page-limit disable" : "page-limit"} 
+                disabled={page === 1}
+                onClick={() => handlePageChange(1)}
+            >
+                <ChevronFirst />
+            </button>
+            <button 
+                className={page === 1 ? "page-limit disable" : "page-limit"} 
                 disabled={page === 1}
                 onClick={() => handlePageChange(page-1)}
             >
-                {"<"}
+                <ChevronLeft />
             </button>
             {getPageNumbers().map((number, index) => {
-                const numberClass = number === page ? "pagBtn selected" : "";
+                const numberClass = number === page ? "pagBtn selected" : "pagBtn";
                 return (
                     <button 
                         className={numberClass}
@@ -58,11 +69,18 @@ export const Pagination = ({ page, totalPages, handlePageChange }) => {
                 );
             })}
             <button
-                className="page-limit" 
+                className={page === totalPages ? "page-limit disable" : "page-limit"}
                 disabled={page === totalPages}
                 onClick={() => handlePageChange(page+1)}
             >
-                {">"}
+                <ChevronRight />
+            </button>
+            <button 
+                className={page === totalPages ? "page-limit disable" : "page-limit"}
+                disabled={page === totalPages}
+                onClick={() => handlePageChange(totalPages)}
+            >
+                <ChevronLast />
             </button>
         </div>
     );
