@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<strong>NOTE:</strong> For more information about this project, consult [Backend-Project-Rick-and-Morty](https://github.com/lucas-ladeira/Backend-Project-Rick-and-Morty.git) on GitHub.
+
 ## Available Scripts
 
 In the project directory, you can run:
