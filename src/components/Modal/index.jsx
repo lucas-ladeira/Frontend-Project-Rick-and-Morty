@@ -13,7 +13,7 @@ export const CharacterModal = ({ character, modalOpen, setModalOpen }) => {
     return (
         <div className="ModalOverlay" onClick={handleCloseModal}>
             <div className="ModalCard">
-                <button className="CloseButton" onClick={handleCloseModal}>
+                <button className="closeBtn" onClick={handleCloseModal}>
                     Close
                 </button>
                 <div className="ImageBackgroundContainer">
@@ -23,18 +23,23 @@ export const CharacterModal = ({ character, modalOpen, setModalOpen }) => {
                         alt="name"
                     />
                 </div>
+                
                 <div className="ImageContainer">
                     <img src={character.image} alt="name" />
 
-                    <div className="TextOnImage">
-                        <p className="ModalNameText">{character.name}</p>
-                        <p className="ModalSpeciesText">{character.species}</p>
+                    <div className="CharacterInfo">
+                        <p className="NameInfo">
+                            {character.name}
+                        </p>
+                        <p className="SpeciesInfo">
+                            {character.species}
+                        </p>
                     </div>
                 </div>
 
                 <div className="ModalDescription">
                     <p className="title">ABOUT</p>
-                    <p className="title_text">
+                    <p className="titleText">
                         {character.name} is a{" "}
                         {character.gender === "unknown" ||
                         character.gender === ""
@@ -46,10 +51,10 @@ export const CharacterModal = ({ character, modalOpen, setModalOpen }) => {
 
                     <p className="title">ORIGIN</p>
                     <p className="OriginSubtitle">Planet</p>
-                    <p className="Sub">{character.origin_name}</p>
+                    <p className="SubInformation">{character.origin_name}</p>
                     <p className="title">LOCATION</p>
                     <p className="OriginSubtitle">Planet</p>
-                    <p className="Sub">{character.location_name}</p>
+                    <p className="SubInformation">{character.location_name}</p>
                 </div>
             </div>
         </div>

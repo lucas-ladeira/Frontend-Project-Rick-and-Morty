@@ -1,4 +1,6 @@
-.CloseButton {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+.closeBtn {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -13,7 +15,7 @@
     z-index: 1;
 }
 
-.CloseButton:hover {
+.closeBtn:hover {
     background-color: #ffffff;
     color: #1b1b1b;
     cursor: pointer;
@@ -73,7 +75,7 @@
     padding-right: 50px;
 }
 
-.TextOnImage {
+.CharacterInfo {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -91,7 +93,7 @@
     border-bottom-right-radius: 10px;
 }
 
-.TextOnImage p {
+.CharacterInfo p {
     margin: 0;
 }
 
@@ -108,7 +110,7 @@
     margin-left: -55px;
 }
 
-.ModalNameText {
+.NameInfo {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -117,7 +119,7 @@
     margin-bottom: 5px;
 }
 
-.ModalSpeciesText {
+.SpeciesInfo {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -134,7 +136,7 @@
     margin-left: -55px;
 }
 
-.Sub {
+.SubInformation {
     color: #fff;
     font-family: Nunito;
     font-size: 28px;
@@ -151,7 +153,7 @@
     padding: 20px;
 }
 
-.title_text {
+.titleText {
     color: #d3d3d3;
     font-family: Nunito;
     font-size: 16px;
