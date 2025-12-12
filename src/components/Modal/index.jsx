@@ -11,7 +11,7 @@ export const CharacterModal = ({ character, modalOpen, setModalOpen }) => {
     };
 
     return (
-        <div className="ModalOverlay" onClick={handleCloseModal}>
+        <div className="ModalOverlay">
             <div className="ModalCard">
                 <button className="closeBtn" onClick={handleCloseModal}>
                     Close
